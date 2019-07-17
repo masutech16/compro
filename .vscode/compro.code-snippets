@@ -7,12 +7,6 @@
 			"#define FOR(i,m,n) for (int i = m; i < n; i++)",
 			"#define ll long long int",
 			"",
-			"struct edge",
-			"{",
-				"int to, cost;",
-			"};",
-			"typedef std::vector<std::vector<edge>> graph;",
-			"const ll MOD = 1000000007;",
 			"using namespace std;",
 			"",
 			"int main()",
@@ -22,9 +16,21 @@
 		]
 	},
 
+	"graph": {
+		"prefix": "g",
+		"body": [
+			"struct edge",
+			"{",
+				"int to, cost;",
+			"};",
+			"typedef std::vector<std::vector<edge>> graph;",
+		]
+	},
+
 	"mod": {
 		"prefix": "mod",
 		"body": [
+			"const ll MOD = 1000000007;",
 			"ll modpow(ll a, ll n, ll mod)",
 			"{",
   			"ll res = 1;",
