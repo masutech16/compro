@@ -84,3 +84,11 @@ void printDouble(double n, int digits)
 {
   cout << fixed << setprecision(digits) << n << endl;
 }
+
+// 重複を消す
+void unique(vector<T> v)
+{
+  sort(v.begin(), v.end());
+  v.erase(unique(v.begin(), v.end()), v.end());
+  return v;
+}
