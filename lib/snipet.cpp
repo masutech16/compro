@@ -32,17 +32,7 @@ int my_binary_search(int *data, int size, int key, int ok, int ng)
 // 最大公約数を求める関数
 int gcd(int n, int m)
 {
-  if (n < m)
-  {
-    int tmp = m;
-    m = n;
-    n = tmp;
-  }
-  if (m == 0)
-  {
-    return n;
-  }
-  return gcd(m, n % m);
+  return n ? gcd(m % n, n) : m;
 }
 
 // 最小公倍数を求める関数
