@@ -1,4 +1,9 @@
 {
   "C_Cpp.clang_format_style": "file",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.vue": "vue",
+    "array": "cpp",
+    "vector": "cpp"
+  }
 }
