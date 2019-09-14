@@ -4,6 +4,19 @@
   "files.associations": {
     "*.vue": "vue",
     "array": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "valarray": "cpp",
+    "*.tcc": "cpp",
+    "ratio": "cpp",
+    "system_error": "cpp",
+    "functional": "cpp",
+    "regex": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "random": "cpp"
   }
 }
