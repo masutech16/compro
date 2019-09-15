@@ -67,8 +67,8 @@ T SegmentTree<T>::query(const int l, const int r, const int node, const int al,
   if (l <= al && ar <= r)
     return data[node];
   int mid = (al + ar) / 2;
-  int leftValue = query(l, r, leftChildIndex(node), al, mid);
-  int rightValue = query(l, r, rightChildIndex(node), mid, ar);
+  T leftValue = query(l, r, leftChildIndex(node), al, mid);
+  T rightValue = query(l, r, rightChildIndex(node), mid, ar);
   return op(leftValue, rightValue);
 }
 
