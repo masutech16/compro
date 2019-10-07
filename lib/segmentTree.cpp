@@ -55,6 +55,7 @@ template <class T> int SegmentTree<T>::leaf(const int index) {
   return index + leafNum - 1;
 }
 
+// [l,r)で探す
 template <class T> T SegmentTree<T>::find(const int l, const int r) {
   return query(l, r, 0, 0, leafNum);
 }

@@ -18,6 +18,10 @@
     "unordered_map": "cpp",
     "unordered_set": "cpp",
     "random": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "deque": "cpp",
+    "iostream": "cpp",
+    "initializer_list": "cpp",
+    "algorithm": "cpp"
   }
 }
