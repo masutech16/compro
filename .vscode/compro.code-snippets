@@ -18,6 +18,7 @@
 			"int main()",
 			"{",
 			"\t$1",
+			"\treturn 0;",
 			"}",
 		]
 	},
@@ -30,51 +31,15 @@
 				"int to, cost;",
 			"};",
 			"typedef std::vector<std::vector<edge>> graph;",
-		]
-	},
-
-	"factor": {
-  	"prefix": "factor",
-  	"body": [
-			"// nまでの数が素数かどうかを判定できるvectorを返す",
-			"std::vector<bool> factor(const int n) {",
-			"  int size = n + 1;",
-			"  std::vector<bool> isPrime(size, true);",
-			"  isPrime[0] = false;",
-			"  isPrime[1] = false;",
-			"  for (int i = 2; i < size; i++) {",
-			"    if (!isPrime[i])",
-			"      continue;",
-			"    for (int k = 2; i * k < size; k++) {",
-			"      isPrime[i * k] = false;",
-			"    }",
-			"  }",
-			"  return isPrime;",
-			"}"
 		],
-		"description": "factor"
+		"description": "重み付きgraphを定義します"
 	},
 
-	"fastFactor": {
-		"prefix": "fastFactor",
+	"popcount": {
+		"prefix": "popcnt",
 		"body": [
-			"// minFactor[i]: iを割り切る最小の素数。存在しない場合は-1。",
-			"std::vector<int> fastFactor(const int n) {",
-			"  int size = n + 1;",
-			"  std::vector<int> minFactor(size, -1);",
-			"  for (int i = 2; i < size; i++) {",
-			"    if (minFactor[i] != -1)",
-			"      continue;",
-			"    minFactor[i] = i;",
-			"    for (int k = 2; i * k < size; k++) {",
-			"      if (minFactor[i * k] == -1) {",
-			"        minFactor[i * k] = i;",
-			"      }",
-			"    }",
-			"  }",
-			"  return minFactor;",
-			"}"
+			"__builtin_popcount($1);"
 		],
-		"description": "fastFactor"
+		"description": "intの立っているbitの数を数えます"
 	}
 }
