@@ -2,7 +2,7 @@
 	"prime_table": {
   	"prefix": "primetable",
   	"body": [
-			"std::vector<bool> factor(const int n) {",
+			"std::vector<bool> prime_table(const int n) {",
 			"  int size = n + 1;",
 			"  std::vector<bool> isPrime(size, true);",
 			"  isPrime[0] = false;",
@@ -23,7 +23,7 @@
 	"prime_int_table": {
 		"prefix": "primetable",
 		"body": [
-			"std::vector<int> fastFactor(const int n) {",
+			"std::vector<int> prime_int_table(const int n) {",
 			"  int size = n + 1;",
 			"  std::vector<int> minFactor(size, -1);",
 			"  for (int i = 2; i < size; i++) {",
