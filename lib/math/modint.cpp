@@ -82,25 +82,15 @@ public:
     if (n < r)
       return ModInt(0);
     ModInt res = ModInt(1);
-    ModInt el = ModInt(1);
-    for (int i = 1; i < n + 1; i++) {
-      res *= el;
-      el++;
+    for (int i = 0; i < r; i++) {
+      res *= ModInt(n - i);
     }
 
     ModInt inv = ModInt(1);
-    el = ModInt(1);
-    for (int i = 1; i < r + 1; i++) {
-      inv *= el;
-      el++;
+    for (int i = 0; i < r; i++) {
+      inv *= ModInt(r - i);
     }
-    el = ModInt(1);
-    for (int i = 1; i < n - r + 1; i++) {
-      inv *= el;
-      el++;
-    }
-    res *= inv.inv();
-    return res;
+    return res / inv;
   }
 
   u64 getValue() const { return value; }
@@ -130,10 +120,10 @@ int main() {
   std::cin >> n >> m >> k;
   mint ans = mint(0);
   mint kumi = mint::comb(n * m - mint(2), k - mint(2));
-  for (int d = 1; d < n.getValue(); d++) {
+  for (int d = 1; d < (int)n.getValue(); d++) {
     ans += (mint(d) * (n - mint(d)) * m * m * kumi);
   }
-  for (int d = 1; d < m.getValue(); d++) {
+  for (int d = 1; d < (int)m.getValue(); d++) {
     ans += (mint(d) * (m - mint(d)) * n * n * kumi);
   }
   std::cout << ans << std::endl;
