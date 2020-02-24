@@ -1,6 +1,7 @@
 #include <cstdint>
-
 #include <iostream>
+#ifndef MOD_INT // 先頭
+#define MOD_INT
 
 template <std::uint_fast64_t MOD> class ModInt {
   using u64 = std::uint_fast64_t;
@@ -114,17 +115,4 @@ std::istream &operator>>(std::istream &in, mint &m) {
   return in;
 }
 
-// verify https://atcoder.jp/contests/abc127/tasks/abc127_e
-int main() {
-  mint n, m, k;
-  std::cin >> n >> m >> k;
-  mint ans = mint(0);
-  mint kumi = mint::comb(n * m - mint(2), k - mint(2));
-  for (int d = 1; d < (int)n.getValue(); d++) {
-    ans += (mint(d) * (n - mint(d)) * m * m * kumi);
-  }
-  for (int d = 1; d < (int)m.getValue(); d++) {
-    ans += (mint(d) * (m - mint(d)) * n * n * kumi);
-  }
-  std::cout << ans << std::endl;
-}
+#endif // MOD_INT // 末尾
