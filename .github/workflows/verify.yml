@@ -21,4 +21,4 @@ jobs:
     - name: Run tests
       env: 
         CXX: g++
-      run: oj-verify run -tle 10
+      run: oj-verify run --tle 10
