@@ -1,0 +1,9 @@
+{
+  "task": {
+    "program": ["template.cpp"],
+    "submit": "template.cpp"
+  },
+  "contest": {
+    "static": ["test.sh", "submit.sh"]
+  }
+}

@@ -3,6 +3,7 @@
   "editor.formatOnSave": true,
   "files.associations": {
     "*.vue": "vue",
+    "*.m": "matlab",
     "array": "cpp",
     "vector": "cpp",
     "valarray": "cpp",
@@ -59,6 +60,11 @@
     "streambuf": "cpp",
     "thread": "cpp",
     "cmath": "cpp",
-    "typeindex": "cpp"
-  }
+    "typeindex": "cpp",
+    "list": "cpp",
+    "istream": "cpp",
+    "fstream": "cpp",
+    "typeinfo": "cpp",
+    "string_view": "cpp"
+  },
 }

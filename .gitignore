@@ -2,4 +2,4 @@
 *.exe
 workspace/
 !.vscode/*
-*/.verify-helper
+*.verify-helper
