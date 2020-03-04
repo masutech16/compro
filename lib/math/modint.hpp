@@ -1,6 +1,6 @@
 #include <cstdint>
 #include <iostream>
-#ifndef MOD_INT // 先頭
+#ifndef MOD_INT
 #define MOD_INT
 
 template <std::uint_fast64_t MOD> class ModInt {
@@ -114,5 +114,4 @@ std::istream &operator>>(std::istream &in, mint &m) {
   m = mint(i);
   return in;
 }
-
-#endif // MOD_INT // 末尾
+#endif

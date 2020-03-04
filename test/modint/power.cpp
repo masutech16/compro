@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B"
-#include "../lib/math/modint.cpp"
+#include "../../lib/math/modint.hpp"
 #include <iostream>
 
 int main() {
