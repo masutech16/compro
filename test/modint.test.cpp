@@ -1,5 +1,4 @@
-#define PROBLEM                                                                \
-  "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B"
 #include "../lib/math/modint.cpp"
 #include <iostream>
 

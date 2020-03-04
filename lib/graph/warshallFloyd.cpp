@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <vector>
-
 #include <iostream>
 
 template <typename T> struct edge {
@@ -9,9 +8,7 @@ template <typename T> struct edge {
 };
 
 template <typename T>
-std::vector<std::vector<T>>
-warshallFloyd(const int size, const std::vector<std::vector<edge<T>>> &g,
-              const T init) {
+std::vector<std::vector<T>> warshallFloyd(const int size, const std::vector<std::vector<edge<T>>> &g, const T init) {
 
   std::vector<std::vector<T>> d(size);
 
