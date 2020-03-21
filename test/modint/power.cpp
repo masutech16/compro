@@ -2,6 +2,8 @@
 #include "../../lib/math/modint.hpp"
 #include <iostream>
 
+using mint = ModInt<1000000007>;
+
 int main() {
   mint m;
   int n;

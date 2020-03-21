@@ -98,20 +98,18 @@ public:
 
 private:
   u64 value;
+
+  friend std::ostream &operator<<(std::ostream &out, const ModInt<MOD> &m) {
+    out << m.value;
+    return out;
+  }
+
+  friend std::istream &operator>>(std::istream &in, ModInt &m) {
+    uint_fast64_t i;
+    in >> i;
+    m = ModInt(i);
+    return in;
+  }
 };
 
-// ここを問題ごとのMODに書き換える
-using mint = ModInt<1000000007>;
-
-std::ostream &operator<<(std::ostream &out, const mint &m) {
-  out << m.getValue();
-  return out;
-};
-
-std::istream &operator>>(std::istream &in, mint &m) {
-  uint_fast64_t i;
-  in >> i;
-  m = mint(i);
-  return in;
-}
 #endif
