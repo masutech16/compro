@@ -6,7 +6,7 @@
 #define ll long long int
 #define vl vector<ll>
 #define vi vector<int>
-using P = pair<int, int>;
+using P = std::pair<int, int>;
 const int INF = 2147483647;
 const ll MOD = 1000000007;
 
