@@ -1,5 +1,4 @@
 #include <functional>
-#include <iostream>
 #include <vector>
 #ifndef SEGMENT_TREE
 #define SEGMENT_TREE
