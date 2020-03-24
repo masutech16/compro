@@ -9,13 +9,6 @@ template <std::uint_fast64_t MOD> class ModInt {
 public:
   ModInt(const u64 val = 0) { value = val % MOD; }
 
-  bool operator==(const ModInt &rhs) const { return value == rhs.value; }
-  bool operator!=(const ModInt &rhs) const { return !(*this == rhs); }
-  bool operator<(const ModInt &rhs) const { return value < rhs.value; }
-  bool operator>(const ModInt &rhs) const { return value > rhs.value; }
-  bool operator<=(const ModInt &rhs) const { return !(*this > rhs); }
-  bool operator>=(const ModInt &rhs) const { return !(*this < rhs); }
-
   ModInt operator+(const ModInt rhs) const { return ModInt(*this) += rhs; }
   ModInt operator-(const ModInt rhs) const { return ModInt(*this) -= rhs; }
   ModInt operator*(const ModInt rhs) const { return ModInt(*this) *= rhs; }
