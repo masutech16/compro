@@ -8,8 +8,6 @@
 #define ll long long int
 #define vl vector<ll>
 #define vi vector<int>
-const int INF = 2147483647;
-const ll MOD = 1000000007;
 
 using namespace std;
 #endif
