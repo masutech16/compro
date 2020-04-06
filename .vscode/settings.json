@@ -1,6 +1,11 @@
 {
   "C_Cpp.clang_format_style": "file",
   "editor.formatOnSave": true,
+  "triggerTaskOnSave.tasks": {
+    "build": [
+      "workspace/tmp.cpp"
+    ]
+  },
   "files.associations": {
     "*.vue": "vue",
     "*.m": "matlab",
@@ -65,6 +70,20 @@
     "istream": "cpp",
     "fstream": "cpp",
     "typeinfo": "cpp",
-    "string_view": "cpp"
+    "string_view": "cpp",
+    "variant": "cpp",
+    "codecvt": "cpp",
+    "any": "cpp",
+    "filesystem": "cpp",
+    "optional": "cpp",
+    "shared_mutex": "cpp",
+    "bit": "cpp",
+    "charconv": "cpp",
+    "cuchar": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "iterator": "cpp",
+    "memory_resource": "cpp",
+    "climits": "cpp"
   },
 }

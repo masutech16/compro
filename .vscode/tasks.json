@@ -1,0 +1,10 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "bash -lc 'cd workspace && g++ -std=c++14 -I ../lib/ -Wall -Wextra -fuse-ld=gold -fsanitize=undefined tmp.cpp && oj-bundle -I '../lib/' tmp.cpp > submit.cpp'",
+    }
+  ]
+}
