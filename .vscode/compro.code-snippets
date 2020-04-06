@@ -12,18 +12,6 @@
 		]
 	},
 
-	"graph": {
-		"prefix": "g",
-		"body": [
-			"struct edge",
-			"{",
-				"int to, cost;",
-			"};",
-			"typedef std::vector<std::vector<edge>> graph;",
-		],
-		"description": "重み付きgraphを定義します"
-	},
-
 	"popcount": {
 		"prefix": "popcnt",
 		"body": [
