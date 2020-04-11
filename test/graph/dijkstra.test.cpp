@@ -8,7 +8,7 @@ int main() {
   int v, e, r;
   std::cin >> v >> e >> r;
 
-  std::vector<std::vector<edge>> g(v);
+  std::vector<std::vector<edge<int>>> g(v);
 
   for (int i = 0; i < e; i++) {
     int s, t, d;
