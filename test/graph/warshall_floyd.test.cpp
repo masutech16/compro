@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C&lang=jp"
-#include <iostream>
 #include "../../lib/graph/warshall_floyd.hpp"
+#include <iostream>
 
 int main() {
   int v, e;
@@ -14,8 +14,7 @@ int main() {
     g[a].push_back({b, c});
   }
 
-  long long int MAX = 200000000001;
-  auto d = warshallFloyd(v, g, MAX);
+  auto d = warshallFloyd(g);
 
   bool negative_cycle = false;
   for (int i = 0; i < v; i++) {
@@ -30,7 +29,7 @@ int main() {
   } else {
     for (int i = 0; i < v; i++) {
       for (int j = 0; j < v; j++) {
-        if (d[i][j] == MAX) {
+        if (d[i][j] == std::numeric_limits<long long int>::max()) {
           std::cout << "INF";
         } else {
           std::cout << d[i][j];
