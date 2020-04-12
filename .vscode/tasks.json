@@ -4,7 +4,7 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "bash -lc 'cd workspace && g++ -std=c++14 -I ../lib/ -Wall -Wextra -fuse-ld=gold -fsanitize=undefined tmp.cpp && oj-bundle -I '../lib/' tmp.cpp > submit.cpp'",
+      "command": "bash -lc 'cd workspace && g++-9 -std=c++17 -I ../lib/ -Wall -Wextra -fuse-ld=gold -fsanitize=undefined tmp.cpp && oj-bundle -I '../lib/' tmp.cpp > submit.cpp'",
     }
   ]
 }
