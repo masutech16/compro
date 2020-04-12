@@ -14,7 +14,7 @@ int main() {
     g[a].push_back({b, c});
   }
 
-  auto d = warshallFloyd(g);
+  auto d = warshall_floyd(g);
 
   bool negative_cycle = false;
   for (int i = 0; i < v; i++) {

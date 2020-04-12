@@ -5,7 +5,7 @@
 #ifndef WARSHALL_FLOYD
 #define WARSHALL_FLOYD
 
-template <typename T> std::vector<std::vector<T>> warshallFloyd(const std::vector<std::vector<edge<T>>> &g) {
+template <typename T> std::vector<std::vector<T>> warshall_floyd(const std::vector<std::vector<edge<T>>> &g) {
   const int size = (int)g.size();
   constexpr T MAX = std::numeric_limits<T>::max();
 
