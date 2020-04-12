@@ -16,8 +16,7 @@ int main() {
     g[s].push_back({t, d});
   }
 
-  std::vector<int> ans(v);
-  dijkstra(r, g, ans);
+  std::vector<int> ans = dijkstra(r, g);
 
   for (int i = 0; i < v; i++) {
     if (ans[i] == INT_MAX) {

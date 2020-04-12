@@ -1,3 +1,4 @@
+#include "edge.hpp"
 #include <climits>
 #include <limits>
 #include <queue>
@@ -5,17 +6,13 @@
 
 #ifndef DIJKSTRA
 #define DIJKSTRA
-#include "edge.hpp"
 
-// sからの各頂点への最短距離をdに格納して返す。計算量はO(E logV)
-template <class T> void dijkstra(const int s, const std::vector<std::vector<edge<T>>> &g, std::vector<T> &d) {
+// sからの各頂点への最短距離を返す。計算量はO(E logV)
+template <class T> std::vector<T> dijkstra(const int s, const std::vector<std::vector<edge<T>>> &g) {
   std::priority_queue<std::pair<T, int>, std::vector<std::pair<T, int>>, std::greater<std::pair<T, int>>> q;
 
   constexpr T MAX = std::numeric_limits<T>::max();
-
-  for (auto &di : d) {
-    di = MAX;
-  }
+  std::vector<T> d(g.size(), MAX);
   d[s] = 0;
   q.push(std::make_pair(d[s], s));
 
@@ -36,6 +33,7 @@ template <class T> void dijkstra(const int s, const std::vector<std::vector<edge
       q.push(std::make_pair(d[u], u));
     }
   }
+  return d;
 }
 
 #endif
