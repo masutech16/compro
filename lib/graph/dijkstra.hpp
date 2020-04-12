@@ -5,11 +5,7 @@
 
 #ifndef DIJKSTRA
 #define DIJKSTRA
-
-template <class T> struct edge {
-  int to;
-  T cost;
-};
+#include "edge.hpp"
 
 // sからの各頂点への最短距離をdに格納して返す。計算量はO(E logV)
 template <class T> void dijkstra(const int s, const std::vector<std::vector<edge<T>>> &g, std::vector<T> &d) {

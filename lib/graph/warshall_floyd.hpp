@@ -1,12 +1,9 @@
 #include <algorithm>
 #include <vector>
+
 #ifndef WARSHALL_FLOYD
 #define WARSHALL_FLOYD
-
-template <typename T> struct edge {
-  int to;
-  T cost;
-};
+#include "edge.hpp"
 
 template <typename T>
 std::vector<std::vector<T>> warshallFloyd(const int size, const std::vector<std::vector<edge<T>>> &g, const T init) {
