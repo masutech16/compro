@@ -1,5 +1,7 @@
 *.out
 *.exe
-workspace/
+workspace/*
+!workspace/gen.sh
+!workspace/watch.sh
 !.vscode/*
 *.verify-helper
