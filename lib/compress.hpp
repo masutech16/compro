@@ -1,8 +1,9 @@
 #include <algorithm>
 #include <cassert>
-#include <vector>
-
 #include <iostream>
+#include <vector>
+#ifndef COMPRO_COMPRESS
+#define COMPRO_COMPRESS
 
 template <class T> class Compress {
 public:
@@ -19,7 +20,7 @@ public:
     }
   }
   void add(const T x) {
-    assert(!this->isBuilt);
+    assert(!isBuilt);
     v.emplace_back(x);
   }
 
@@ -30,30 +31,16 @@ public:
   }
 
   int get(const T x) const {
-    assert(this->isBuilt);
+    assert(isBuilt);
     return lower_bound(v.begin(), v.end(), x) - v.begin();
   }
 
   const T &operator[](const int k) const { return v[k]; }
 
+  int size() const { return v.size(); }
+
 private:
   std::vector<T> v;
   bool isBuilt;
 };
-
-// verify: https://atcoder.jp/contests/abc036/tasks/abc036_c
-int main() {
-  int n;
-  std::cin >> n;
-  std::vector<int> a(n);
-  for (int i = 0; i < n; i++) {
-    std::cin >> a[i];
-  }
-  Compress<int> c(a);
-  c.build();
-
-  for (int i = 0; i < n; i++) {
-    std::cout << c.get(a[i]) << std::endl;
-  }
-  return 0;
-}
+#endif
