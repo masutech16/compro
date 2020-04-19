@@ -1,3 +1,7 @@
 #include "template.hpp"
 
-int main() {}
+int main() {
+  cin.tie(0);
+  ios::sync_with_stdio(false);
+
+}
