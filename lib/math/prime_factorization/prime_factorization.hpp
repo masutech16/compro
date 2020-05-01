@@ -2,10 +2,11 @@
 #ifndef PRIME_FACTORIZATION
 #define PRIME_FACTORIZATION
 
+// TODO: 一般化
 // nの素因数分解を行う。計算量O(sqrt(n))
-std::vector<int> prime_factorization(int n) {
-  std::vector<int> ret;
-  for (int d = 2; d * d <= n; d++) {
+template <class T> std::vector<T> prime_factorization(T n) {
+  std::vector<T> ret;
+  for (T d = 2; d * d <= n; d++) {
     while (n % d == 0) {
       ret.push_back(d);
       n /= d;
