@@ -1,12 +1,13 @@
 
 #include <algorithm>
-#include <chrono>
-#include <random>
+
+#include "utils/random.hpp"
+
 #ifndef COMPRO_GENERATOR_PERMUTATION
 #define COMPRO_GENERATOR_PERMUTATION
 class PermutationGenerator {
 private:
-  std::mt19937 mt = std::mt19937((std::chrono::steady_clock::now().time_since_epoch().count()));
+  std::mt19937 mt = make_mt();
 
 public:
   // {lower_limit, ..., upper_limit}の順列を生成します。

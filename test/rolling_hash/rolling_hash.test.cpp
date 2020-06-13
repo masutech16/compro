@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_14_B"
-#include "../../lib/rolling_hash.hpp"
+#include "../../lib/string/rolling_hash.hpp"
 #include <iostream>
 #include <string>
 

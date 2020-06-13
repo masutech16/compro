@@ -1,4 +1,4 @@
-#include "generator/integer.hpp"
+#include "../generator/integer.hpp"
 #include <cassert>
 #include <cstdint>
 #include <string>

@@ -1,6 +1,6 @@
-#include <chrono>
-#include <random>
 #include <vector>
+
+#include "utils/random.hpp"
 
 #ifndef COMPRO_GENERATOR_NUMBER
 #define COMPRO_GENERATOR_NUMBER
@@ -9,7 +9,7 @@ private:
   std::mt19937 mt;
 
 public:
-  NumberGenerator<T>() { mt = std::mt19937((std::chrono::steady_clock::now().time_since_epoch().count())); }
+  NumberGenerator<T>() { mt = make_mt(); }
 
   // [lower_limit, upper_limit)の範囲で浮動小数点型の数を生成します。
   T gen(T lower_limit, T upper_limit) {

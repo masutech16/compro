@@ -1,4 +1,4 @@
-#include "../doubling.hpp"
+#include "../utils/doubling.hpp"
 #include <cmath>
 #include <vector>
 #ifndef COMPRO_LCA

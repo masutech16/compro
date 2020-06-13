@@ -1,14 +1,14 @@
 
-#include "integer.hpp"
 #include <algorithm>
-#include <chrono>
-#include <random>
+
+#include "integer.hpp"
+#include "utils/random.hpp"
 
 #ifndef COMPRO_GENERATOR_TREE
 #define COMPRO_GENERATOR_TREE
 class TreeGenerator {
 private:
-  std::mt19937 mt = std::mt19937((std::chrono::steady_clock::now().time_since_epoch().count()));
+  std::mt19937 mt = make_mt();
 
 public:
   // rootを根として頂点を{1,..., size}とした木を作ります。

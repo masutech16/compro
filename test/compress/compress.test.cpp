@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_4_A"
-#include "../../lib/compress.hpp"
+#include "../../lib/utils/compress.hpp"
 #include <iostream>
 #include <vector>
 

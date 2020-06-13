@@ -26,4 +26,20 @@ template <class T> void chmax(T &a, T b) {
     a = b;
 }
 
+// C++ 17に完全移行したら消す
+// 最大公約数を求める
+template <class T> T gcd(T n, T m) { return n ? gcd(m % n, n) : m; }
+
+// 最小公倍数を求める
+template <class T> T lcm(T n, T m) {
+  int g = gcd(n, m);
+  return n * m / g;
+}
+
+// 重複を消す。計算量はO(NlogN)
+template <class T> void unique(std::vector<T> &v) {
+  std::sort(v.begin(), v.end());
+  v.erase(std::unique(v.begin(), v.end()), v.end());
+}
+
 #endif
