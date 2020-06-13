@@ -1,5 +1,7 @@
+#include <cassert>
 #include <cstdint>
 #include <iostream>
+#include <vector>
 #ifndef MOD_INT
 #define MOD_INT
 
@@ -85,6 +87,17 @@ public:
       inv *= ModInt(r - i);
     }
     return res / inv;
+  }
+
+  // nC0からnCnまでを計算する。計算量はO(n)
+  // @param n     要素数
+  // @param vec   結果を格納する配列
+  static void combination_table(int n, std::vector<ModInt> &vec) {
+    assert(static_cast<int>(vec.size()) >= n + 1);
+    vec[0] = ModInt(1);
+    for (int r = 1; r < n + 1; r++) {
+      vec[r] = vec[r - 1] * ModInt(n - r + 1) / ModInt(r);
+    }
   }
 
   u64 getValue() const { return value; }
