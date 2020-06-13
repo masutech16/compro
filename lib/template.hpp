@@ -12,7 +12,9 @@
 
 using namespace std;
 
-template <class T> void say(bool val, T yes = "Yes", T no = "No") { cout << (val ? yes : no) << "\n"; }
+template <class T> void say(bool val, T yes, T no) { cout << (val ? yes : no) << "\n"; }
+
+void say(bool val, string yes = "Yes", string no = "No") { say<string>(val, yes, no); }
 
 template <class T> void chmin(T &a, T b) {
   if (a > b)
