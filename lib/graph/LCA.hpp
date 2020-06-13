@@ -9,6 +9,17 @@ private:
   std::vector<std::vector<int>> next;
   int size;
 
+public:
+  LCA(std::vector<std::vector<int>> next) {
+    next = next;
+    size = next[0].size();
+  }
+
+  LCA(std::vector<int> seed) {
+    this->next = doubling(seed, -1);
+    size = next[0].size();
+  }
+
   int anc(int u, int deg) {
     int cur = u;
     int cnt = 0;
@@ -36,17 +47,6 @@ private:
       }
     }
     return ok;
-  }
-
-public:
-  LCA(std::vector<std::vector<int>> next) {
-    next = next;
-    size = next[0].size();
-  }
-
-  LCA(std::vector<int> seed) {
-    this->next = doubling(seed, -1);
-    size = next[0].size();
   }
 
   int get(int u, int v) {

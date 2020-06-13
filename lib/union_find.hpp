@@ -7,12 +7,6 @@ private:
   std::vector<int> parent;
   std::vector<int> _size;
 
-  int root(int x) {
-    if (parent[x] == -1)
-      return x;
-    return parent[x] = root(parent[x]);
-  }
-
 public:
   UnionFind(const int s) {
     parent = std::vector<int>(s, -1);
@@ -31,6 +25,12 @@ public:
   }
 
   int size(int x) { return _size[x]; }
+
+  int root(int x) {
+    if (parent[x] == -1)
+      return x;
+    return parent[x] = root(parent[x]);
+  }
 
   bool isSame(int x, int y) { return root(x) == root(y); }
 };
