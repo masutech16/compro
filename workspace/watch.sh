@@ -8,6 +8,6 @@ while true; do
                 echo ""
                 echo "updated: $current"
                 last=$current
-                eval "g++-9 -std=c++17 -I ../../lib/ -Wall -Wextra -fuse-ld=gold -fsanitize=undefined tmp.cpp && oj-bundle -I '../../lib/' tmp.cpp > submit.cpp"
+                eval "g++-8 -std=c++17 -I ../../lib/ -Wall -Wextra -fuse-ld=gold -fsanitize=undefined tmp.cpp && oj-bundle -I '../../lib/' tmp.cpp > submit.cpp"
         fi
 done
