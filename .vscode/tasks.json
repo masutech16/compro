@@ -2,9 +2,13 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build",
+      "label": "Build Main",
       "type": "shell",
-      "command": "bash -lc 'cd workspace && g++-9 -std=c++17 -I ../lib/ -Wall -Wextra -fuse-ld=gold -fsanitize=undefined tmp.cpp && oj-bundle -I '../lib/' tmp.cpp > submit.cpp'",
+      "command": "g++-8 -g ${file} -I ${workspaceFolder}/lib/ -O0 -o ${fileDirname}/a.out",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
