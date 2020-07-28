@@ -1,11 +1,7 @@
 {
   "C_Cpp.clang_format_style": "file",
   "editor.formatOnSave": true,
-  "triggerTaskOnSave.tasks": {
-    "build": [
-      "workspace/tmp.cpp"
-    ]
-  },
+  "editor.tabSize": 2,
   "files.associations": {
     "*.vue": "vue",
     "*.m": "matlab",
