@@ -24,10 +24,12 @@ RUN apt-get update \
     # Install C++ tools
     && apt-get -y install build-essential cmake cppcheck valgrind \
     #
-    # install oj, oj-verify
+    # install oj, oj-verify, oj-template-generator
     && apt-get -y install python3-pip \
     && pip3 install online-judge-tools \
     && pip3 install online-judge-verify-helper \
+    && pip3 install online-judge-template-generator \
+
     #
     # install acc
     #

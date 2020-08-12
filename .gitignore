@@ -5,3 +5,4 @@ workspace/*
 !workspace/watch.sh
 !.vscode/*
 *.verify-helper
+oj/oj-cookie.jar

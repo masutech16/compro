@@ -1,0 +1,5 @@
+contest_directory = "/workspaces/compro/workspace/{contest_id}"
+problem_directory = "{problem_id}"
+
+[templates]
+"main.cpp" = "/workspaces/compro/oj/template.cpp"
