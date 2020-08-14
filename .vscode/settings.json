@@ -80,6 +80,7 @@
     "set": "cpp",
     "iterator": "cpp",
     "memory_resource": "cpp",
-    "climits": "cpp"
+    "climits": "cpp",
+    "queue": "cpp"
   }
 }
