@@ -30,14 +30,6 @@ RUN apt-get update \
     && pip3 install online-judge-verify-helper \
     && pip3 install online-judge-template-generator \
 
-    #
-    # install acc
-    #
-    && curl -sL https://deb.nodesource.com/setup_14.x | bash \
-    && apt-get -y install nodejs \
-    && npm install -g npm \
-    && npm install -g atcoder-cli \
-
 
     # [Optional] Update UID/GID if needed
     && if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
@@ -49,7 +41,14 @@ RUN apt-get update \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    #
+    # set alias
+    && echo "alias oj-submit='oj -c /workspaces/compro/oj/oj-cookie.jar s -y --no-open'" >> /home/vscode/.bashrc \
+    && echo "alias g++='g++-8 -std=c++17 -I /workspaces/compro/lib -Wall -Wextra -fuse-ld=gold -fsanitize=undefined'" >> /home/vscode/.bashrc \
+    && echo "alias oj-bundle='oj-bundle -I /workspaces/compro/lib'" >> /home/vscode/.bashrc \
+    && echo "alias oj-prepare='oj-prepare --config-file \"/workspaces/compro/oj/oj-prepare.config.toml\"'" >> /home/vscode/.bashrc
+
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
