@@ -1,9 +1,0 @@
-{
-  "task": {
-    "program": [["template.cpp", "{TaskID}.cpp"]],
-    "submit": "template.cpp"
-  },
-  "contest": {
-    "static": ["test.sh", "submit.sh"]
-  }
-}
