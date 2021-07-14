@@ -4,7 +4,7 @@
     {
       "label": "Build Main",
       "type": "shell",
-      "command": "g++-8 -g ${file} -I ${workspaceFolder}/lib/ -O0 -o ${fileDirname}/a.out",
+      "command": "g++-8 -std=c++17 -g ${file} -I ${workspaceFolder}/lib/ -O0 -o ${fileDirname}/a.out",
       "group": {
         "kind": "build",
         "isDefault": true
