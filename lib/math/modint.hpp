@@ -9,7 +9,7 @@ template <std::uint_fast64_t MOD> class ModInt {
   using u64 = std::uint_fast64_t;
 
 public:
-  ModInt(const u64 val = 0) { value = val % MOD; }
+  ModInt(const u64 val = 0) { value = (val + MOD) % MOD; }
 
   ModInt operator+(const ModInt rhs) const { return ModInt(*this) += rhs; }
   ModInt operator-(const ModInt rhs) const { return ModInt(*this) -= rhs; }
@@ -97,6 +97,17 @@ public:
     vec[0] = ModInt(1);
     for (int r = 1; r < n + 1; r++) {
       vec[r] = vec[r - 1] * ModInt(n - r + 1) / ModInt(r);
+    }
+  }
+
+  // n!までを計算する
+  // @param n     要素数
+  // @param vec   結果を格納する配列
+  static void factorial_table(int n, std::vector<ModInt> &vec) {
+    assert(static_cast<int>(vec.size()) >= n + 1);
+    vec[0] = ModInt(1);
+    for (int r = 1; r <= n; r++) {
+      vec[r] = vec[r - 1] * ModInt(r);
     }
   }
 
