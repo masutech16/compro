@@ -2,7 +2,7 @@
 #ifndef PRIME_TABLE
 #define PRIME_TABLE
 
-// nまでの数が素数かどうかを判定できるvectorを返す. 計算量O(n sqrt(n))
+// nまでの数が素数かどうかを判定できるvectorを返す. 計算量O(n log(log(n)))
 std::vector<bool> prime_table(const int n) {
   int size = n + 1;
   std::vector<bool> table(size, true);
