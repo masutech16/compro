@@ -8,7 +8,8 @@
             "defines": [
                 "_DEBUG",
                 "UNICODE",
-                "_UNICODE"
+                "_UNICODE",
+                "LOCAL"
             ],
             "windowsSdkVersion": "10.0.17763.0",
             "compilerPath": "/usr/bin/g++",
