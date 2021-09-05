@@ -24,7 +24,7 @@ public:
     size[ry] = size[rx];
   }
 
-  int get_size(int x) { return size[x]; }
+  int get_size(int x) { return size[root(x)]; }
 
   int root(int x) {
     if (parent[x] == -1)
