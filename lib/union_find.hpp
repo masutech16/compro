@@ -5,26 +5,26 @@
 class UnionFind {
 private:
   std::vector<int> parent;
-  std::vector<int> _size;
+  std::vector<int> size;
 
 public:
   UnionFind(const int s) {
     parent = std::vector<int>(s, -1);
-    _size = std::vector<int>(s, 1);
+    size = std::vector<int>(s, 1);
   }
 
   void merge(int x, int y) {
     int rx = root(x), ry = root(y);
     if (rx == ry)
       return;
-    if (_size[rx] < _size[ry])
+    if (size[rx] < size[ry])
       std::swap(rx, ry);
     parent[ry] = rx;
-    _size[rx] += _size[ry];
-    _size[ry] = _size[rx];
+    size[rx] += size[ry];
+    size[ry] = size[rx];
   }
 
-  int size(int x) { return _size[x]; }
+  int get_size(int x) { return size[x]; }
 
   int root(int x) {
     if (parent[x] == -1)
@@ -32,6 +32,6 @@ public:
     return parent[x] = root(parent[x]);
   }
 
-  bool isSame(int x, int y) { return root(x) == root(y); }
+  bool is_same(int x, int y) { return root(x) == root(y); }
 };
 #endif
