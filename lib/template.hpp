@@ -1,10 +1,13 @@
 #ifndef TEMPLATE
 #define TEMPLATE
+#include "Assert/Assert.hpp"
 #include "io/vector.hpp"
 #include <bits/stdc++.h>
-#define REP(i, n) for (int i = 0; i < n; i++)
-#define FOR(i, m, n) for (int i = m; i < n; i++)
-#define ALL(v) (v).begin(), (v).end()
+#define REP(i, n) for (int i = 0; i < (n); i++)
+#define FOR(i, m, n) for (int i = (m); i < (n); i++)
+#define RREP(i, n) for (int i = (n - 1); i >= 0; i--)
+#define RFOR(i, m, n) for (int i = (n - 1); i >= (m); i--)
+#define ALL(v) std::begin(v), std::end(v)
 #define coutd(n) cout << fixed << setprecision(n)
 #define ll long long int
 #define vl vector<ll>
@@ -12,6 +15,11 @@
 #define MM << " " <<
 
 using namespace std;
+
+struct P {
+  ll x;
+  ll y;
+};
 
 template <class T> void chmin(T &a, T b) {
   if (a > b)
