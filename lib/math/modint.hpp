@@ -1,3 +1,4 @@
+#include "Assert/Assert.hpp"
 #include <cassert>
 #include <cstdint>
 #include <iostream>
@@ -92,19 +93,20 @@ public:
   // nC0からnCnまでを計算する。計算量はO(n)
   // @param n     要素数
   // @param vec   結果を格納する配列
-  static void combination_table(int n, std::vector<ModInt> &vec) {
-    assert(static_cast<int>(vec.size()) >= n + 1);
+  static std::vector<ModInt> combination_table(int n) {
+    std::vector<ModInt> vec(n + 1);
     vec[0] = ModInt(1);
     for (int r = 1; r < n + 1; r++) {
       vec[r] = vec[r - 1] * ModInt(n - r + 1) / ModInt(r);
     }
+    return vec;
   }
 
   // n!までを計算する
   // @param n     要素数
   // @param vec   結果を格納する配列
-  static void factorial_table(int n, std::vector<ModInt> &vec) {
-    assert(static_cast<int>(vec.size()) >= n + 1);
+  static std::vector<ModInt> factorial_table(int n) {
+    std::vector<ModInt> vec(n + 1);
     vec[0] = ModInt(1);
     for (int r = 1; r <= n; r++) {
       vec[r] = vec[r - 1] * ModInt(r);
