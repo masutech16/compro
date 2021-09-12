@@ -1,8 +1,8 @@
+#ifndef MY_ASSERT
+#define MY_ASSERT
 #include <cassert>
 #include <iostream>
 #include <string>
-#ifndef MY_ASSERT
-#define MY_ASSERT
 
 #ifdef LOCAL
 
