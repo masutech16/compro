@@ -16,11 +16,6 @@
 
 using namespace std;
 
-struct P {
-  ll x;
-  ll y;
-};
-
 template <class T> void chmin(T &a, T b) {
   if (a > b)
     a = b;
