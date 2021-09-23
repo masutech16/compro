@@ -14,12 +14,12 @@
     }                                                                                                                  \
   } while (0)
 
-#define FAIL ASSERT_MSG(false, "到達しない想定の場所に到達しました")
+#define FAIL() ASSERT_MSG(false, "到達しない想定の場所に到達しました")
 
 #else
 
 #define ASSERT_MSG(...) (void)0
-#define FAIL (void)0
+#define FAIL() (void)0
 
 #endif
 
