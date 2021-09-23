@@ -4,22 +4,28 @@
 #ifndef COMPRO_LCA
 #define COMPRO_LCA
 
+// LCAを計算するクラス
 class LCA {
 private:
   std::vector<std::vector<int>> next;
   int size;
 
 public:
+  // コンストラクタ
+  // next: ダブリング済みの配列
   LCA(std::vector<std::vector<int>> next) {
     next = next;
     size = next[0].size();
   }
 
+  // コンストラクタ
+  // seed: i番目には頂点iの親の頂点番号を入れる。
   LCA(std::vector<int> seed) {
     this->next = doubling(seed, -1);
     size = next[0].size();
   }
 
+  // 頂点uのdeg個上の頂点を返す
   int anc(int u, int deg) {
     int cur = u;
     int cnt = 0;
@@ -35,6 +41,7 @@ public:
     return cur;
   }
 
+  // 頂点uの根からの距離を返す
   int length(int u) {
     int ok = 0;
     int ng = size;
@@ -49,6 +56,7 @@ public:
     return ok;
   }
 
+  // 頂点uとvのLCAを返す。
   int get(int u, int v) {
     int lu = length(u), lv = length(v);
     if (lu > lv) {
@@ -68,6 +76,11 @@ public:
       }
     }
     return anc(u, ok);
+  }
+
+  int dist(int u, int v) {
+    int lca = get(u, v);
+    return length(u) + length(v) - 2 * length(lca);
   }
 };
 #endif
