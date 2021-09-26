@@ -1,5 +1,7 @@
 *.out
 *.exe
+marathon/*
+pch/*
 workspace/*
 !workspace/gen.sh
 !workspace/watch.sh

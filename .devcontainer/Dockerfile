@@ -45,7 +45,7 @@ RUN apt-get update \
     #
     # set alias
     && echo "alias oj-submit='oj -c /workspaces/compro/oj/oj-cookie.jar s -y --no-open'" >> /home/vscode/.bashrc \
-    && echo "alias g++='g++-8 -O2 -std=c++17 -I /workspaces/compro/lib -I /workspaces/compro/lib/ac-library -Wall -Wextra -DLOCAL -fuse-ld=gold -fsanitize=undefined'" >> /home/vscode/.bashrc \
+    && echo "alias g++='g++-8 -O2 -std=c++17 -I /workspaces/compro/lib -I /workspaces/compro/lib/ac-library -I /workspaces/compro/pch -Wall -Wextra -DLOCAL -fuse-ld=gold -fsanitize=undefined'" >> /home/vscode/.bashrc \
     && echo "alias oj-bundle='oj-bundle -I /workspaces/compro/lib -I /workspaces/compro/lib/ac-library'" >> /home/vscode/.bashrc \
     && echo "alias oj-prepare='oj-prepare --config-file \"/workspaces/compro/oj/oj-prepare.config.toml\"'" >> /home/vscode/.bashrc
 

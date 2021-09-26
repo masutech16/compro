@@ -10,6 +10,6 @@ while true; do
                 echo ""
                 echo "updated: $current"
                 last=$current
-                eval "g++-8 -O2 -std=c++17 -I $LIB_DIR -I $LIB_DIR/ac-library -Wall -Wextra -DLOCAL -fuse-ld=gold -fsanitize=undefined $1 && oj-bundle -I '$LIB_DIR' -I '$LIB_DIR/ac-library' $1 > submit.cpp && oj t"
+                eval "g++-8 -O2 -std=c++17 -I $LIB_DIR -I $LIB_DIR/ac-library -I /workspaces/compro/pch -Wall -Wextra -DLOCAL -fuse-ld=gold -fsanitize=undefined $1 && oj-bundle -I '$LIB_DIR' -I '$LIB_DIR/ac-library' $1 > submit.cpp && oj t"
         fi
 done

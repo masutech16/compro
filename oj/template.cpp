@@ -7,6 +7,8 @@
     data['config']['scanner'] = 'cin'
     data['config']['printer'] = 'cout'
 %>\
+#include <bits/stdc++.h>
+
 #include "template.hpp"
 
 ${cplusplus.declare_constants(data)}

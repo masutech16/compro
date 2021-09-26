@@ -1,8 +1,9 @@
 #ifndef TEMPLATE
 #define TEMPLATE
 #include "Assert/Assert.hpp"
-#include "io/vector.hpp"
-#include <bits/stdc++.h>
+#include "IO/Pair.hpp"
+#include "IO/Vector.hpp"
+#include <algorithm>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 #define FOR(i, m, n) for (int i = (m); i < (n); i++)
 #define RREP(i, n) for (int i = (n - 1); i >= 0; i--)
