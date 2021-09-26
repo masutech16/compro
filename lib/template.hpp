@@ -26,10 +26,17 @@ template <class T> void chmax(T &a, T b) {
     a = b;
 }
 
-// 重複を消す。計算量はO(NlogN)
 template <class T> void unique(std::vector<T> &v) {
-  std::sort(v.begin(), v.end());
-  v.erase(std::unique(v.begin(), v.end()), v.end());
+  std::sort(std::begin(v), std::begin(v));
+  v.erase(std::unique(std::begin(v), std::end(v)), std::end(v));
+}
+
+template <class F, class T> bool if_all(std::vector<T> &v, F &&func) {
+  return std::all_of(std::begin(v), std::end(v), func);
+}
+
+template <class F, class T> bool if_any(std::vector<T> &v, F &&func) {
+  return std::any_of(std::begin(v), std::end(v), func);
 }
 
 #endif
