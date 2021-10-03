@@ -62,6 +62,8 @@ public:
   ModInt inv() { return ModInt::pow(*this, MOD - 2); }
 
   static ModInt pow(ModInt base, long long int n) {
+    if (n < 0)
+      return pow(base.inv(), -n);
     ModInt res = ModInt(1);
     while (n) {
       if (n & 1) {
