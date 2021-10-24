@@ -6,5 +6,6 @@ workspace/*
 !workspace/gen.sh
 !workspace/watch.sh
 !.vscode/*
-*.verify-helper
+test/.verify-helper/*
+!test/.verify-helper/config.toml
 oj/oj-cookie.jar

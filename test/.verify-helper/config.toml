@@ -1,0 +1,3 @@
+[[languages.cpp.environments]]
+CXX = "g++-8"
+CXXFLAGS = ["-O2", "-std=c++17", "-I", "/workspaces/compro/lib", "-Wall", "-Wextra", "-fuse-ld=gold", "-fsanitize=undefined"]
