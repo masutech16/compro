@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
-#include "../../lib/union_find.hpp"
+#include "../../lib/UnionFind/UnionFind.hpp"
 
 int main() {
   int n, q;
@@ -12,6 +12,6 @@ int main() {
     if (com == 0)
       uf.merge(x, y);
     else
-      std::cout << (uf.isSame(x, y) ? 1 : 0) << std::endl;
+      std::cout << (uf.is_same(x, y) ? 1 : 0) << std::endl;
   }
 }

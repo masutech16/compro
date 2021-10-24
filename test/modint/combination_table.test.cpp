@@ -12,8 +12,7 @@ int main() {
     return 0;
   }
 
-  std::vector<mint> table(k + 1);
-  mint::combination_table(k, table);
+  std::vector<mint> table(std::move(mint::combination_table(k)));
 
   mint ans(0);
   for (int i = 0; i <= k; i++) {

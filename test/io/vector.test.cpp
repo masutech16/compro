@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_A"
-#include "../../lib/io/vector.hpp"
+#include "../../lib/IO/Vector.hpp"
 #include <cmath>
 
 int main() {

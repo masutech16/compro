@@ -1,4 +1,4 @@
-#include "../union_find.hpp"
+#include "../UnionFind/UnionFind.hpp"
 #include "edge.hpp"
 #include <algorithm>
 #include <vector>
@@ -29,12 +29,14 @@ template <class T> T kruskal(std::vector<kruskal_edge<T>> edges, const int size)
   T ret(0);
   std::sort(edges.begin(), edges.end(), [](kruskal_edge<T> a, kruskal_edge<T> b) { return a.cost < b.cost; });
   UnionFind uf(size);
+  int edge_nums = 0;
   for (const auto e : edges) {
-    if (uf.isSame(e.from, e.to))
+    if (uf.is_same(e.from, e.to))
       continue;
     uf.merge(e.from, e.to);
+    edge_nums++;
     ret += e.cost;
   }
-  return ret;
+  return edge_nums == size - 1 ? ret : T(-1);
 }
 #endif
