@@ -17,6 +17,7 @@ jobs:
 
     - name: Install dependencies
       run: pip3 install -U git+https://github.com/kmyk/online-judge-verify-helper.git@master
+      run: apt install g++-8
 
     - name: Run tests
       run: oj-verify run --tle 10
