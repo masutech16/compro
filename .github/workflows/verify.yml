@@ -20,3 +20,4 @@ jobs:
 
     - name: Run tests
       run: oj-verify run --tle 10
+      working-directory: ./test
